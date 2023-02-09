@@ -1,0 +1,23 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+
+int main () {
+std::ifstream in_file;
+    std::string line;
+    int num;
+    double total;
+    in_file.open("Romeo-and-Juliet.txt");
+    if (!in_file) {
+        std::cerr << "Problem opening file." << std::endl;
+        return 1;
+    }
+   /* std::cout << "File is available." << std::endl;
+    return 0;*/
+    in_file >> line >> num >> total;
+    std::cout << std::setw(10) << std::left << line << std::endl;
+    std::cout << std::setw(10) << std::left << num << std::endl;
+    std::cout << std::setw(10) << std::left << total << std::endl;
+    in_file.close();
+    return 0;
+}
