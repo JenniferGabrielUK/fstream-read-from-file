@@ -1,0 +1,14 @@
+#include <iostream>
+#include <fstream>
+
+int main () {
+std::ifstream in_file;
+    in_file.open("Romeo-and-Juliet.txt");
+    if (!in_file) {
+        std::cerr << "Problem opening file." << std::endl;
+        return 1;
+    }
+    std::cout << "File is available." << std::endl;
+    return 0;
+return 0;
+}
