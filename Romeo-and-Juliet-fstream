@@ -17,6 +17,7 @@ double total;
    in_file >> line >> num;
    std::cout << line << std::endl;
    std::cout << num << std::endl; 
+   std::cout << total << std::endl;
    in_file.close();
 return 0;
 }
