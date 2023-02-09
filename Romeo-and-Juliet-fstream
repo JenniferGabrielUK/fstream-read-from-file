@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 
 int main () {
 std::ifstream in_file;
@@ -8,7 +9,9 @@ std::ifstream in_file;
         std::cerr << "Problem opening file." << std::endl;
         return 1;
     }
-    std::cout << "File is available." << std::endl;
-    return 0;
+   // std::cout << "File is available." << std::endl;
+   // return 0;
+   in_file >> line;
+   std::cout << line << std::endl;
 return 0;
 }
