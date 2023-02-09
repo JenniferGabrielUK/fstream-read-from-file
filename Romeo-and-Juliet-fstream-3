@@ -1,0 +1,28 @@
+// portfolio-iostream-fstream.cpp : This file contains the 'main' function. Program execution begins and ends there.
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <string>
+
+int main()
+{
+	std::ifstream in_file;
+	in_file.open("Romeo-and-Juliet.txt");
+	if (!in_file) {
+		std::cerr << "Problem loading file." << std::endl;
+		return 1;
+	}
+	//Output of txt file by line
+	std::string line{};
+	while (std::getline(in_file, line)) {
+		std::cout << line << std::endl;
+	}
+	//Output of txt file by character
+	char c{};
+	while (in_file.get(c)) {
+		std::cout << c;
+	}
+	std::cout << std::endl;
+	in_file.close();
+	return 0;
+}
