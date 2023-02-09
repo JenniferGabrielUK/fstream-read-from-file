@@ -5,6 +5,8 @@
 int main () {
 std::ifstream in_file;
 std::string line;
+int num;
+double total;
     in_file.open("Romeo-and-Juliet.txt");
     if (!in_file) {
         std::cerr << "Problem opening file." << std::endl;
