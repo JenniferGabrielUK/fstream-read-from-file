@@ -4,6 +4,7 @@
 
 int main () {
 std::ifstream in_file;
+std::string line;
     in_file.open("Romeo-and-Juliet.txt");
     if (!in_file) {
         std::cerr << "Problem opening file." << std::endl;
